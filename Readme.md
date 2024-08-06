@@ -1,5 +1,7 @@
 # Web 2 + DevOps - Progress Tracker 📚🚀
 
+![Repository Banner](./assets/web%20dev%20readme%20banner%20image.jpeg)
+
 Welcome to my progress tracker for the Web 2 + DevOps course. This repository will document my journey and milestones throughout the course.
 
 ## Table of Contents 📋
