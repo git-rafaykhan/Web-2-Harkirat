@@ -12,6 +12,7 @@ Welcome to my progress tracker for the Web 2 + DevOps course. This repository wi
   - [Course Overview 📚](#course-overview-)
   - [Week-by-Week Progress 📅](#week-by-week-progress-)
     - [Week 1: August 3-4, 2024](#week-1-august-3-4-2024)
+    - [Week 2: August 10-11, 2024](#week-2-august-10-11-2024)
   - [Learnings and Reflections 💡](#learnings-and-reflections-)
   - [Future Goals 🎯](#future-goals-)
   - [Acknowledgments 🙏](#acknowledgments-)
@@ -52,19 +53,36 @@ The Web 2 + DevOps course covers a range of topics essential for modern web deve
   - Hands-on practice with JavaScript methods and concepts 📚
   - Initial exploration of how JavaScript handles memory and garbage collection 💾
 
+### Week 2: August 10-11, 2024
+
+- **Topics Covered:**
+  - Advanced JavaScript Concepts 🔍
+  - Functional Programming and Passing Functions as Arguments 🔄
+  - Asynchronous Code: Callbacks, Promises, and Async/Await ⏳
+  - I/O Bound vs CPU Bound Tasks 📊
+
+- **Key Achievements:**
+  - Mastered advanced JavaScript concepts and asynchronous programming techniques 🚀
+  - Implemented and tested callbacks, promises, and async/await in practical scenarios 🔧
+  - Differentiated between I/O bound and CPU bound tasks, enhancing problem-solving skills 📈
+
+- **Notes:**
+  - Explored the event loop, call stack, and callback queue in JavaScript 🌐
+  - Practical exercises to understand and apply asynchronous operations 🛠️
+
 ## Learnings and Reflections 💡
 
 - **Insights Gained:**
-  - In-depth understanding of core JavaScript features and their applications 💻
-  - Practical knowledge of memory management and its impact on performance 🔍
+  - In-depth understanding of advanced JavaScript features and their applications 💻
+  - Practical knowledge of asynchronous code management and its impact on performance 🔍
 
 - **Challenges Faced:**
-  - Navigating complex string and array manipulations 🔄
-  - Understanding the implications of JavaScript's single-threaded nature 🚧
+  - Grasping complex asynchronous programming concepts and handling callbacks effectively ⏳
+  - Understanding the nuances of I/O and CPU bound tasks 📊
 
 - **Skills Developed:**
-  - Improved proficiency in JavaScript methods and array operations 🌟
-  - Enhanced knowledge of backend concepts and memory management 🛠️
+  - Improved proficiency in handling asynchronous operations and functional programming 🌟
+  - Enhanced problem-solving abilities related to performance and task management 🛠️
 
 ## Future Goals 🎯
 
@@ -78,7 +96,7 @@ The Web 2 + DevOps course covers a range of topics essential for modern web deve
 
 ## Acknowledgments 🙏
 
-I would like to thank the course instructors and mentors for their guidance and support. Special thanks to my peers for their collaboration and insights.
+I would like to thank the course instructors and mentors for their guidance and support. Special thanks to **Harkirat Singh** for the valuable insights and **100xdevs** for providing a fantastic platform for learning and growth.
 
 ---
 
