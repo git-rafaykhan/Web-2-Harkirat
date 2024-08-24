@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App </title>
+</head>
+<body style="background-color: grey;">
+    <input type="text" placeholder="Enter the Todo item">
+    <button onclick="AddTodo()">Add item</button>
+    <div id="todos">
+
+    </div>
+</body>
+<script>
+        function deleteTodo(index){
+          const elem = document.querySelectorAll("h4")[index];
+          const todos = document.querySelector("#todos");
+          todos.removeChild(elem); 
+          console.log("Element deleted");
+          console.log(index + "is deleted")
+        }
+        
+        let counter = 1;
+        function AddTodo() {
+            const headElem = document.createElement("h4");
+            const input = document.querySelector("input");
+
+            headElem.innerHTML = `${input.value} <button onclick='deleteTodo(${counter})'>Delete</button>`;            const elem = document.querySelector('#todos').appendChild(headElem);
+            console.log("Add Todo is working");
+            counter ++; 
+        }
+</script>
+</html>
