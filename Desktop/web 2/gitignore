@@ -1,0 +1,53 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.old
+
+# Project files
+dist/
+node_modules/
+.idea/
+.vscode/
+
+# System files
+# Ignore the entire user's directory (only if this is not needed)
+../../
+
+# Ignore common unwanted directories
+/AppData/
+/Application Data/
+/Cookies/
+/Local Settings/
+/My Documents/
+/NetHood/
+/PrintHood/
+/Recent/
+/SendTo/
+/Start Menu/
+/Templates/
+/Contacts/
+/Documents/
+/Downloads/
+/Favorites/
+/Links/
+/Music/
+/Pictures/
+/Searches/
+/Videos/
+
+# Windows user-specific files
+*.log
+*.ini
+*.dat
+*.lnk
+
+# MacOS user-specific files
+*.DS_Store
+
