@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1b1b1b;
+      font-family: 'Montserrat', sans-serif;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #2b2b2b, #1b1b1b, #101010);
+      background-size: 300% 300%;
+      animation: gradientBackground 15s ease infinite;
+    }
+
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 30px;
+      background-color: #2c2c2c;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+      border: 2px solid transparent;
+      position: relative;
+      z-index: 1;
+    }
+
+    .input, .button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background-color: #3b3b3b;
+      color: #e0e0e0;
+    }
+
+    .button {
+      background-color: #f39c12;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e67e22;
+    }
+
+    .todo-item {
+      padding: 12px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      background-color: #3b3b3b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 4px solid #f39c12;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .todo-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .todo-item button {
+      padding: 6px 12px;
+      border-radius: 8px;
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .todo-item button:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-3xl font-bold mb-6 text-center">To-Do App</h1>
+    <input type="text" class="input" placeholder="Enter a new task...">
+    <button class="button" onclick="addTodo()">Add Task</button>
+    <button class="button" onclick="deleteLastTodo()">Delete last task</button>
+    <button class="button" onclick="deleteFirstTodo()">Delete first task</button>
+    <div id="todos"></div>
+  </div>
+
+  <script>
+    let todos = [];
+
+    function addTodo() {
+      todos.push({
+        title: document.querySelector("input").value
+      })
+      render()
+    }
+
+    function deleteLastTodo() {
+      todos.splice(todos.length - 1, 1); // remove the last element from the arr
+      render()
+    }
+
+    function deleteFirstTodo() {
+      todos.splice(0, 1); // remove the first element from the arr
+      render()
+    }
+
+    function createTodoComponent(todo) {
+      const div = document.createElement("div");
+      const h1 = document.createElement("h1");
+      const button = document.createElement("button");
+      button.innerHTML = "Delete";
+      h1.innerHTML = todo.title;
+      div.className = "todo-item";
+      div.append(h1);
+      div.append(button);
+      button.addEventListener('click', () => deleteTodoComponent(div));
+      return div;
+    }
+
+    function deleteTodoComponent(element) {
+      element.parentNode.removeChild(element);
+      console.log("Element deleted");
+    }
+
+    function render() {
+      document.querySelector("#todos").innerHTML = "";
+      for (let i = 0; i < todos.length; i++) {
+        const element = createTodoComponent(todos[i]);
+        document.querySelector("#todos").appendChild(element);
+      }
+    }
+  </script>
+</body>
+</html>
